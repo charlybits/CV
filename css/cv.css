@@ -1,0 +1,23 @@
+/*centramos el titulo del proyecto, cambiamos tipografias y color.
+*/
+body{
+  background-color: aquamarine;
+}
+div.Titulo-principal-de-la-pag{
+    text-align: center;
+    font-family: 'Crimson Pro', serif;
+    background-color:#cef1db;
+    font-size: 50px;
+    color: rgb(8, 21, 132);
+}
+
+div.accesos-directos{
+  font-family: 'Clima Crisis', serif;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+}
+.titulos-secundarios {
+    font-family: 'Clima Crisis';
+    font-size: 23px;
+    color: rgb(0, 0, 0);
+  }

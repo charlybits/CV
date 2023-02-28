@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/cv.css" rel="stylesheet" type="text/css">
+    <title>Trabajo final CV</title>
 
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Clima+Crisis">
+</head>
+<body>
+    <div class="Titulo-principal-de-la-pag">
+        <h1>Curriculum Vitae</h1>
+    </div>
+    
+    <div class="accesos-directos">
+        <p>Accesos Directos: <br>
+            <a href="#datos-personal">- Datos Personales</a><br>
+            <a href="#Estudios-Academicos">- Estudios Academicos</a><br>
+            <a href="#Experiencia-Laboral">- Experiencia Laboral</a>
+        </p>
+    </div>
+
+    <form id="formulario">
+     
+        <a name ="datos-personal">
+        <h2 class="titulos-secundarios">1) Datos Personales</h2>
+
+        <p class="imagen"> Seleccione su image de perfil<p>
+        <p><img id="icono" src="icono perfil.jpg" width="100" height="100"><br>            
+            <label for="image">Imagen de Perfil:</label><br>
+            <input type="file" id="image" name="image" multiple required>
+        </p><br>
+        <br Absbottom> 
+        <label for="nombre">Nombre y Apellido:</label><br>
+        <input type="text" id="nombre" name="nombre" size="50" required><br>
+
+        <label for="fecha">Fecha de Nacimiento:</label><br>
+        <input type="date" id="fecha" name="fecha" required><br>
+
+        <label for="direccion">Dirección:</label><br>
+        <input type="text" id="direccion" name="direccion" size="50" required><br>
+
+        <label for="correo">Correo electronico:</label><br>
+        <input type="email" id="correo" name="correo" size="50" required><br>
+
+        <label for="tel">N° de telefono:</label><br>
+        <input type="number" id="tel" name="tel" size="50" required><br>
+        
+        <a name ="Estudios-Academicos"><br>
+        <h2 class="titulos-secundarios">2) Estudios Academicos</h2>
+        <p>Adjuntar Certificados</p>
+        <label for="files">Provanzas:</label>
+        <input type="file" id="files" name="files" multiple><br><br>
+
+
+        <a name ="Experiencia-Laboral">
+        <h2 class="titulos-secundarios">3) Experiencia Laboral</h2><br>
+        <label for="trabajo">Comentanos sobre tu experiencia laboral:</label><br>
+        <textarea name="trabajo" rows="15" cols="100"> </textarea> <br>
+
+        <input id="Enviar" type="button" onclick="guardarinformacion()" value="Enviar">
+        <input type="button" onclick="limpiarFormulario()" value="Limpiar formulario">
+
+        <script src="cv.js"></script>
+    </form>
+    <div id="docuemntoscargados" style="display: none;">
+        El Curriculum fue cargado con exito!
+    </div>
+
+</html>
