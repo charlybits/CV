@@ -1,5 +1,3 @@
-
-
 // cambiar imagen de miniatura
 const $image = document.querySelector("#image"),
 $icono = document.querySelector("#icono");
@@ -17,14 +15,27 @@ $image.addEventListener("change", () => {
 //limpiamos el formulario lleno
   function limpiarFormulario() {
     document.getElementById("formulario").reset();
-    $icono.src = $image;
   }
-//Mensaje de cv enviado y limpiado
+//Mensaje de cv enviado condifetentes estilos y limpiado del formulario
   function guardarinformacion() {
-    document.getElementById("docuemntoscargados").style.display = 'block';
-    document.getElementById("docuemntoscargados").style.color = 'red';
-    document.getElementById("docuemntoscargados").style.fontFamily = 'Crimson Pro';
-    document.getElementById("docuemntoscargados").style.fontSize = '40px';
-    document.getElementById("formulario").reset();
+
+    var  image = document.getElementById('image').value;
+    var  nombre = document.getElementById('nombre').value;
+    var  fecha = document.getElementById('fecha').value;
+    var  direccion = document.getElementById('direccion').value;
+    var  correo = document.getElementById('correo').value;
+    var  tel = document.getElementById('tel').value;
+    //compruebo los campos vacios
+    if((image === '') || (nombre === '') || (fecha === '') || (direccion === '') || (correo === '') || (tel === '')){ 
+      alert("Los campos no pueden quedar vacios");
+      return true;
+    }else {
+      $icono.src = src="icono perfil.jpg"; 
+      document.getElementById("docuemntoscargados").style.display = 'block';
+      document.getElementById("docuemntoscargados").style.color = 'red';
+      document.getElementById("docuemntoscargados").style.fontFamily = 'Crimson Pro';
+      document.getElementById("docuemntoscargados").style.fontSize = '40px';
+      document.getElementById("formulario").reset();
+    }
   }
 
